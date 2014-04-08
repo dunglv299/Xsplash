@@ -1,9 +1,5 @@
 package com.teusoft.facesplash.activity;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.Calendar;
-
 import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Context;
@@ -14,7 +10,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.graphics.Typeface;
-import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.IBinder;
@@ -24,11 +19,14 @@ import android.view.Display;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.teusoft.facesplash.R;
 import com.teusoft.facesplash.service.BackgroundSoundService;
 import com.teusoft.facesplash.service.BackgroundSoundService.LocalBinder;
 import com.teusoft.facesplash.util.Utils;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Calendar;
 
 public class MainActivity extends Activity {
 	private static final String TAG = "MainActivity";
@@ -39,7 +37,6 @@ public class MainActivity extends Activity {
 	public static final String JPEG_FILE_PREFIX = "IMG_";
 	public static final String JPEG_FILE_SUFFIX = ".jpg";
 	int width;
-	MediaPlayer mp;
 	BackgroundSoundService mService;
 	boolean mbound = false;
 

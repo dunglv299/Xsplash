@@ -1,8 +1,5 @@
 package com.teusoft.facesplash.activity;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ComponentName;
@@ -10,12 +7,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.res.TypedArray;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
+import android.graphics.*;
 import android.graphics.BitmapFactory.Options;
-import android.graphics.Color;
-import android.graphics.Matrix;
-import android.graphics.PointF;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.os.AsyncTask;
@@ -31,17 +24,9 @@ import android.view.View.OnTouchListener;
 import android.view.ViewTreeObserver;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.CompoundButton;
+import android.widget.*;
 import android.widget.CompoundButton.OnCheckedChangeListener;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
-import android.widget.RadioButton;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.widget.Toast;
-
 import com.teusoft.facesplash.CustomViewObserver;
 import com.teusoft.facesplash.R;
 import com.teusoft.facesplash.SimulationView;
@@ -53,6 +38,9 @@ import com.teusoft.facesplash.service.BackgroundSoundService;
 import com.teusoft.facesplash.service.BackgroundSoundService.LocalBinder;
 import com.teusoft.facesplash.util.ManageSharedPreferences;
 import com.teusoft.facesplash.util.Utils;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ControlActivity extends Activity implements CustomViewObserver,
 		OnTouchListener, ChangeAimListener, OnClickListener,
@@ -601,7 +589,6 @@ public class ControlActivity extends Activity implements CustomViewObserver,
 	/**
 	 * Button menu listener
 	 * 
-	 * @param isChecked
 	 */
 	private void selectFaceWankTool() {
 		resetRadioButton();
